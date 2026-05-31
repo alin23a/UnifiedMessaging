@@ -24,29 +24,25 @@
     </properties>
 
     <dependencies>
-        <!-- ===== Web layer ===== -->
-        <!-- REST controllers for the React frontend -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-webmvc</artifactId>
         </dependency>
-        <!-- WebSocket push for real-time message delivery to the UI -->
+
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-websocket</artifactId>
         </dependency>
-        <!-- Outbound HTTP calls to Slack/Discord/Telegram APIs -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-restclient</artifactId>
         </dependency>
-        <!-- Bean validation on incoming request DTOs -->
+
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-validation</artifactId>
         </dependency>
 
-        <!-- ===== Security: JWT-based auth between services ===== -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-security</artifactId>
@@ -73,7 +69,7 @@
             <scope>runtime</scope>
         </dependency>
 
-        <!-- ===== Persistence: Postgres via JPA, Flyway for migrations ===== -->
+
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-data-jpa</artifactId>
@@ -92,19 +88,16 @@
             <scope>runtime</scope>
         </dependency>
 
-        <!-- ===== Redis: presence cache, hot thread cache, session state ===== -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-data-redis</artifactId>
         </dependency>
 
-        <!-- ===== Kafka: the event bus for fan-out delivery ===== -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-kafka</artifactId>
         </dependency>
 
-        <!-- ===== Spring Modulith: clean module boundaries within the service ===== -->
         <dependency>
             <groupId>org.springframework.modulith</groupId>
             <artifactId>spring-modulith-starter-core</artifactId>
@@ -119,19 +112,16 @@
             <scope>runtime</scope>
         </dependency>
 
-        <!-- ===== Spring AI: per-channel message rewriting (optional, can defer) ===== -->
         <dependency>
             <groupId>org.springframework.ai</groupId>
             <artifactId>spring-ai-starter-model-anthropic</artifactId>
         </dependency>
 
-        <!-- ===== Observability: health checks, metrics, tracing endpoints ===== -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-actuator</artifactId>
         </dependency>
 
-        <!-- ===== Developer convenience ===== -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-devtools</artifactId>
@@ -144,7 +134,6 @@
             <optional>true</optional>
         </dependency>
 
-        <!-- ===== Test scope ===== -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
@@ -165,7 +154,7 @@
             <artifactId>spring-modulith-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
-        <!-- Testcontainers for spinning up real Postgres/Kafka/Redis in tests -->
+
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-testcontainers</artifactId>
